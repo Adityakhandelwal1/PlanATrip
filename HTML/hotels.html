@@ -1,0 +1,61 @@
+<head>
+</head>
+<body>
+<h1 style="text-align:center;">Book HOTELS</h1>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div style="border:3px solid red;border-radius:3px;display:inline-block;margin-left:400px;padding:10px;">
+<form name="details" method='post' action='hotel.php'>
+</p>enter hotel name<p>
+<input type="text" name='hotel'></input><!--add this name,checkin date and check out time to database-->
+<br>
+<br>check-in:
+date:<input name="datein" type="number" max="31" min='1'></input>
+month:<input name="monthin" type="number" max="12" min='1'></input>
+year:<input name="yearin" type="number" max="2018" min=2017'></input>
+<br>
+<br>
+checkout:
+date:<input name="dateout" type="number" max="31" min='1'></input>
+month:<input name="monthout" type="number" max="12" min='1'></input>
+year:<input name="yearout" type="number" max="2018" min=2017'></input>
+<br>
+<br>
+<br>
+
+<input type='submit' value='submit'></input>
+</form>
+</div>
+<!--<script>
+var z
+{
+var xin= document.forms.['details']['datein'].value;
+var yin= document.forms.['details']['monthin'].value;
+var zin= document.forms.['details']['yearin'].value;
+if (yin==1 ||yin==3 ||yin==5 ||yin==7 ||yin==8 ||yin==10 ||yin==12){
+	yin=yin*31;
+}
+else if (yin==4 ||yin==6 ||yin==9 ||yin==11){
+	yin=yin*30;
+}else if (z%4==0)
+	{yin=yin*29;	}
+else if (z%4!=0)
+{	yin=yin*28;
+}
+var x= document.forms.['details']['dateout'].value;
+var yout= document.forms.['details']['monthout'].value;
+var z= document.forms.['details']['yearout'].value;
+if (yout==1 ||yout==3 ||yout==5 ||yout==7 ||yout==8 ||yout==10 ||yout==12){
+	yout=yout*31;
+}
+else if (yout==4 ||yout==6 ||yout==9 ||yout==11){
+	yout=yout*30;
+}else if (z%4==0)
+	{yout=yout*29;	}
+else if (z%4!=0)
+{	yout=yout*28;
+}
+var w=((yout + xout)-(yin+xin));
+document.forms.['details']['duration'].value=w;
+}-->
+</script>
+</body>

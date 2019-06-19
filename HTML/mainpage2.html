@@ -1,0 +1,157 @@
+<html>
+<title>PlanATrip</title>
+<head>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+
+
+<style>
+#f2{
+Font-family:papyrus;
+}
+#z2{
+height:50px;width:60px;
+}
+#about {
+    top: 20px;
+    background-color: #4CAF50;
+}
+#blog {
+    top: 80px;
+    background-color: #2196F3;
+}
+#projects {
+    top: 140px;
+    background-color: #f44336;
+}
+#contact {
+    top: 200px;
+    background-color: #555
+}
+#mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+    left: 0;
+}
+Fieldset{
+ border: none;
+Background-color:white;
+width:80%;position:relative;left:130px;right:10px;
+}
+#z1{
+Padding:15px;
+Font-family:arial;
+Color:white;}
+div.tab {
+    overflow: hidden;
+    background-color: black;
+width:82%;position:relative;left:132px;right:10px;
+}
+div.tab button {
+    Background-color:black;
+    float: left;
+    border: none;
+    outline: none;
+    font-size: 17px;
+}
+div.tab button.active {
+    Background-color:red;
+}
+.tabcontent {
+    display: none;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    background-image: url("background.JPG");
+    height: 40%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#p1{
+Border:solid white;
+Width:30%;
+Height:250px;
+Float:left;
+Margin:5px;
+Padding:5px;
+}
+
+Body{
+Background-color:black;
+background-image: url("moun.JPG");
+height: 100%; 
+background-size: cover;
+}
+Button{
+Background-color:black;
+Border:none;
+Border-radius:5px;
+Color:white;
+Height:70px;
+Width:100px;
+Font-size:15px;
+}
+Input{
+Height:40px;
+Width:250px;
+}
+</style>
+
+</head>
+
+<body>
+
+<p style="background-color:white;height:70px;"><br>
+<b style="font-size:30px;padding:140px;color:red;font-family:papyrus;">PlanATrip</b>
+<?php echo "Logged in as :".$person; ?>
+
+
+<a href="logout.php"><b style="font-size:25px;padding:140px;color:red;font-family:papyrus;position:relative;left:700px;">LogOut</b></a>
+
+
+</p>
+
+<div id="mySidenav" class="sidenav">
+  <a href="#" id="about">Welcome</a>
+  <a href="#" id="blog">To</a>
+  <a href="#" id="projects">Your</a>
+  <a href="#" id="contact">Dreams</a>
+</div>
+
+<br><div class="bg"></div><br><br>
+
+<h2 style="color:white;font-family:papyrus;position:relative;left:130px;">Contact:<br>Let us book your next trip!<br>Delhi,India<br>Phone:+911234567890<br>email:planatrip@gmail.com</h2>
+
+
+</body>
+</html>

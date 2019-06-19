@@ -1,0 +1,484 @@
+<html>
+<title>PlanATrip - The Price You See Is What You Pay</title>
+<head>
+
+<script>
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+
+<style>
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancelbtn {
+    padding: 14px 20px;
+    Background-color:red;
+}
+
+.cancelbtn,.signupbtn {float:left;width:50%}
+
+.container {
+    padding: 16px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
+
+
+
+
+#f2{
+Font-family:papyrus;
+}
+#z2{
+height:50px;width:60px;
+}
+#about {
+    top: 20px;
+    background-color: #4CAF50;
+}
+#blog {
+    top: 80px;
+    background-color: #2196F3;
+}
+#projects {
+    top: 140px;
+    background-color: #f44336;
+}
+#contact {
+    top: 200px;
+    background-color: #555
+}
+#mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+    left: 0;
+}
+Fieldset{
+ border: none;
+Background-color:white;
+width:80%;position:relative;left:130px;right:10px;
+}
+#z1{
+Padding:15px;
+Font-family:arial;
+Color:white;}
+div.tab {
+    overflow: hidden;
+    background-color: black;
+width:82%;position:relative;left:132px;right:10px;
+}
+div.tab button {
+    Background-color:black;
+    float: left;
+    border: none;
+    outline: none;
+    font-size: 17px;
+}
+div.tab button.active {
+    Background-color:red;
+}
+.tabcontent {
+    display: none;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+#p1{
+Border:solid white;
+Width:30%;
+Height:250px;
+Float:left;
+Margin:5px;
+Padding:5px;
+}
+
+Body{
+Background-color:black;
+background-image: url("moun.JPG");
+height: 100%; 
+background-size: cover;
+}
+Button{
+Background-color:black;
+Border:none;
+Border-radius:5px;
+Color:white;
+Height:70px;
+Width:100px;
+Font-size:15px;
+}
+Input{
+Height:40px;
+Width:250px;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 32px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;color:white;
+    cursor: pointer;position:relative;left:132px;
+}
+
+.button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
+
+.button3:hover {
+    background-color: #f44336;
+    color: white;
+}
+.fixed-bg {
+    background-image: url("background.JPG");
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fixed-bg1 {
+    background-image: url("background.JPG");
+    min-height: 88px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<p style="background-color:white;height:70px;"><br>
+<b style="font-size:30px;padding:140px;color:red;font-family:papyrus;">PlanATrip</b>
+
+
+<?php echo "Logged in as :".$person; ?>
+
+
+<a href="login.html"><b style="font-size:25px;padding:140px;color:red;font-family:papyrus;position:relative;left:700px;">Login/SignUp</b></a>
+</p>
+
+<div id="mySidenav" class="sidenav">
+  <a href="#" id="about">Welcome</a>
+  <a href="#" id="blog">To</a>
+  <a href="#" id="projects">Your</a>
+  <a href="#" id="contact">Dreams</a>
+</div>
+
+
+
+
+<div class="tab">
+<button  class="tablinks" onclick="openCity(event, 'flight')">Flight Booking</button>
+<button  class="tablinks" onclick="openCity(event, 'bus')">Bus Booking</button>
+<button  class="tablinks" onclick="openCity(event, 'train')">train Booking</button>
+
+</div>
+
+
+<div id="F001" class="tabcontent">
+<fieldset>
+<p id="f2">FROM: Delhi<br>
+To:Mumbai<br>
+CLASS:Economy<br>
+COST:3500<br>
+</p>
+</fieldset>
+</div>
+<div id="F002" class="tabcontent">
+<fieldset>
+<p id="f2">FROM: Delhi<br>
+To:Jaipur<br>
+CLASS:Business<br>
+COST:2000<br>
+</p>
+</fieldset>
+</div>
+<div id="F003" class="tabcontent">
+<fieldset>
+<p id="f2">FROM: Delhi<br>
+To:Goa<br>
+CLASS:Economy<br>
+COST:2800<br>
+</p>
+</fieldset>
+</div>
+<div id="F004" class="tabcontent">
+<fieldset>
+<p id="f2">FROM: Delhi<br>
+To:Puducherry<br>
+CLASS:Economy<br>
+COST:3500<br>
+</p>
+</fieldset>
+</div>
+
+<div id="B001" class="tabcontent">
+<fieldset>
+<p id="f2">FROM: Delhi<br>
+To:Mumbai<br>
+TYPE:Sleeper<br>
+COST:2000<br>
+</p>
+</fieldset>
+</div>
+<div id="B002" class="tabcontent">
+<fieldset>
+<p id="f2">FROM: Delhi<br>
+To:Jaipur<br>
+TYPE:Deluxe<br>
+COST:1000<br>
+</p>
+</fieldset>
+</div>
+<div id="B003" class="tabcontent">
+<fieldset>
+<p id="f2">FROM: Delhi<br>
+To:Goa<br>
+TYPE:Semideluxe<br>
+COST:2200<br>
+</p>
+</fieldset>
+</div>
+<div id="B004" class="tabcontent">
+<fieldset>
+<p id="f2">FROM: Delhi<br>
+To:Puducherry<br>
+TYPE:deluxe<br>
+COST:3000<br>
+</p>
+</fieldset>
+</div>
+
+<div id="T001" class="tabcontent">
+<fieldset>
+<p id="f2">FROM: Delhi<br>
+To:Mumbai<br>
+CLASS:Sleeper<br>
+COST:1000<br>
+</p>
+</fieldset>
+</div>
+<div id="T002" class="tabcontent">
+<fieldset>
+<p id="f2">FROM: Delhi<br>
+To:Jaipur<br>
+CLASS:2-ac<br>
+COST:1800<br>
+</p>
+</fieldset>
+</div>
+<div id="T003" class="tabcontent">
+<fieldset>
+<p id="f2">FROM: Delhi<br>
+To:Goa<br>
+CLASS:2-ac<br>
+COST:2000<br>
+</p>
+</fieldset>
+</div>
+<div id="T004" class="tabcontent">
+<fieldset>
+<p id="f2">FROM: Delhi<br>
+To:Puducherry<br>
+CLASS:Sleeper<br>
+COST:1800<br>
+</p>
+</fieldset>
+</div>
+
+<div id="flight" class="tabcontent">
+<fieldset>
+<button id="z2" class="tablinks" onclick="openCity(event, 'F001')">F001</button>
+<button id="z2" class="tablinks" onclick="openCity(event, 'F002')">F002</button>
+<button id="z2" class="tablinks" onclick="openCity(event, 'F003')">F003</button>
+<button id="z2" class="tablinks" onclick="openCity(event, 'F004')">F004</button>
+</fieldset>
+</div>
+<div id="bus" class="tabcontent">
+<fieldset>
+<button id="z2" class="tablinks" onclick="openCity(event, 'B001')">B001</button>
+<button id="z2" class="tablinks" onclick="openCity(event, 'B002')">B002</button>
+<button id="z2" class="tablinks" onclick="openCity(event, 'B003')">B003</button>
+<button id="z2" class="tablinks" onclick="openCity(event, 'B004')">B004</button>
+</fieldset>
+</div>
+<div id="train" class="tabcontent">
+<fieldset>
+<button id="z2" class="tablinks" onclick="openCity(event, 'T001')">T001</button>
+<button id="z2" class="tablinks" onclick="openCity(event, 'T002')">T002</button>
+<button id="z2" class="tablinks" onclick="openCity(event, 'T003')">T003</button>
+<button id="z2" class="tablinks" onclick="openCity(event, 'T004')">T004</button>
+</fieldset>
+</div>
+
+
+<br><div class="fixed-bg"></div><br><br>
+
+<a class="button button3" href="iwp/pro.html"><b style="font-size:25px;color:Black;font-family:papyrus;position:relative;right:12px;">Discover Places</b></a>
+
+<a class="button button3" href=". "><b style="font-size:25px;color:Black;font-family:papyrus;position:relative;right:12px;">WHERE<br></b></a>
+
+<br>
+
+
+<div class="tab">
+<b style="font-size:25px;padding:10px;margin:10px;color:#ff6666;font-family:papyrus;">Enter the destination choosen:</b>
+
+<form action="fl.php">
+<input type="text" placeholder="Enter Destination" name="destination" id="destination">
+<button type="submit" style="width:100%;">Find</button>
+</form>
+
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:100%;">Contact/Pay</button>
+
+<br><div class="fixed-bg1"></div><br><br>
+
+<div id="id01" class="modal">
+
+
+  <form class="modal-content animate" action="process3.html">
+    <div class="container">
+
+
+<label><b>Choose Which Service You want to Buy and click paynow.</b></label><br>
+<label><b>For Any Queries:<br>Contact Us on <br> Phone:+911234567890 OR <br>
+email:planatrip@gmail.com <br></b></label><br>
+<label><b>For Payment Please click PayNow.</b></label><br>
+
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">PayNow</button>
+      </div>
+    </div>
+  </form>
+
+
+</div>
+
+</div>
+
+
+
+
+<br><br><br><br>
+
+<fieldset style="width:80%;position:relative;left:130px;right:10px;">
+<I Style=";text-align:right;font-size:20px;">Some places to Discover</I><br><Br>
+<p id="p1"><img src="unnamed.jpg" style="height:200px;width:100%;">New Delhi<br>temple Shopping Monument Auditorium​ Tomb​</P>
+<p id="p1"><img src="unnamed1.jpg" style="height:200px;width:100%;">Mumbai <br> Bollywood  Shopping  ​Backpacking​ Fashion​ temple​</P>
+<p id="p1"><img src="unnamed2.jpg" style="height:200px;width:100%;">Hyderabad<br>Palace  Shopping  temple  ​Amusement parks​ Honeymoon​</P><br><br>
+<p id="p1"><img src="unnamed3.jpg" style="height:200px;width:100%;">Singapore<br>Reservoir garden Shopping Formula One​ Aquarium​</P>
+<p id="p1"><img src="unnamed4.jpg" style="height:200px;width:100%;">Goa<br>Beaches  Honeymoon  ​Seaside resorts​  Casinos​</P>
+<p id="p1"><img src="unnamed5.jpg" style="height:200px;width:100%;">Dubai<br>Safaris  Shopping Desert ​Water parks​ Aquarium​</P><br><br>
+</fieldset><br><br>
+
+
+<h2 style="color:white;font-family:papyrus;position:relative;left:130px;">Contact:<br>Let us book your next trip!<br>Delhi,India<br>Phone:+911234567890<br>email:planatrip@gmail.com</h2>
+
+
+</body>
+</html>
